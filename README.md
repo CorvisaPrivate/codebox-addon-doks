@@ -1,4 +1,5 @@
-codebox-addon-doks
-==================
+Doks (CodeBox add-on)
+========================
 
-Doks integration into your Codebox
+Search documentation directly from your CodeBox (https://github.com/FriendCode/codebox).
+It uses Doks API: http://doks.io
