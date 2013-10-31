@@ -1,11 +1,16 @@
 {
     "name": "doks",
     "version": "0.0.1",
-
     "title": "Doks",
     "description": "Searching documentation made easy.",
     "homepage": "https://github.com/FriendCode/codebox-addon-doks",
-    "author": "Samy Pessé <samypesse@gmail.com> (http://samypesse.fr)",
     "license": "Apache",
-    "main": "main"
+    "author": {
+        "name": "Samy Pessé",
+        "email": "samypesse@gmaiL.com",
+        "url": "http://samypesse.fr"
+    },
+    "client": {
+        "main": "client"
+    }
 }
