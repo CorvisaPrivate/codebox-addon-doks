@@ -9,10 +9,7 @@ define([], function() {
 
     // Execute the search using http proxy from codebox
     var doksSearch = function(docset, query, callback) {
-        $.getJSON(box.proxyUrl("http://api.doks.io/search"), {
-            "q": query,
-            "docset": docset
-        }, callback);
+        return ;
     };
 
     //Add codebox search handler
@@ -20,18 +17,19 @@ define([], function() {
         'id': "doks",
         'title': "Documentation"
     }, function(query) {
-        var d = new hr.Deferred();
-        doksSearch(defaultDocset, query, function(data) {
-            d.resolve(_.map(data.results, _.bind(function(result) {
+        return hr.Requests.getJSON(box.proxyUrl("http://api.doks.io/search"), {
+            "q": query,
+            "docset": defaultDocset
+        }).then(function(data) {
+            return _.map(data.results, _.bind(function(result) {
                 return {
                     "text": result.name+" ("+result.type+")",
                     "callback": _.bind(function() {
                         window.open(result.path);
                     }, this)
                 };
-            })));
+            }));
         });
-        return d;
     });
 });
 

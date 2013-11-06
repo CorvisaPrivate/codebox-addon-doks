@@ -1,4 +1,4 @@
-Doks (CodeBox add-on)
+Doks for Codebox
 ========================
 
 Search documentation directly from your CodeBox (https://github.com/FriendCode/codebox).
