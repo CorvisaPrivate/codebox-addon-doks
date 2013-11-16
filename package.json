@@ -1,6 +1,6 @@
 {
     "name": "doks",
-    "version": "0.1.1",
+    "version": "0.2.1",
     "title": "Doks",
     "description": "Searching documentation made easy.",
     "homepage": "https://github.com/FriendCode/codebox-addon-doks",
@@ -11,6 +11,9 @@
         "url": "http://samypesse.fr"
     },
     "client": {
-        "main": "client"
+        "main": "client",
+        "consumes": [
+            "ace"
+        ]
     }
 }
